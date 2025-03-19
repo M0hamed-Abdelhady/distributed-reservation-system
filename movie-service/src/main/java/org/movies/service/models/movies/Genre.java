@@ -14,6 +14,7 @@ public enum Genre {
     HISTORY,
     HORROR,
     MUSIC,
+    MUSICAL,
     MYSTERY,
     ROMANCE,
     SCI_FI,

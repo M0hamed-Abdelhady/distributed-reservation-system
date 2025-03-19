@@ -19,7 +19,7 @@ import java.util.Objects;
 public class AbstractEntity {
     @Id
     @Column(name = "id", updatable = false, nullable = false, unique = true)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "uuid", updatable = false, nullable = false, unique = true)
