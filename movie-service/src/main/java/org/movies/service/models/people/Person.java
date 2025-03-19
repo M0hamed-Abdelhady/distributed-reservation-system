@@ -39,7 +39,7 @@ public class Person extends AbstractEntity {
     private Set<MoviePerson> movies = new HashSet<>();
 
     @Convert(converter = RoleSetJSONConverter.class)
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "TEXT", nullable = false)
     private Set<Role> roles = new HashSet<>();
 
     @Convert(converter = MapJSONConverter.class)

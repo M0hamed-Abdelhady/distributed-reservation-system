@@ -10,6 +10,7 @@ import org.movies.service.models.AbstractEntity;
 
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,6 +36,9 @@ public class Movie extends AbstractEntity {
     private Integer duration;
 
     @Column(nullable = false)
+    private Double rating;
+
+    @Column(nullable = false)
     private String language;
 
     @Column(nullable = false)
@@ -43,7 +47,7 @@ public class Movie extends AbstractEntity {
     private String trailerUrl;
 
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<MoviePerson> crew = new HashSet<>();
+    private List<MoviePerson> crew;
 
     @ManyToMany
     @JoinTable(
