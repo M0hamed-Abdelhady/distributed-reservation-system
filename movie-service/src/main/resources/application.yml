@@ -7,11 +7,15 @@ security:
     expiration-time: 3600000
 
 spring:
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    validate-on-migrate: true
   application:
-    name: user-service
+    name: movie-service
   datasource:
-#    url: jdbc:postgresql://localhost:5432/users
-    url: jdbc:postgresql://host.docker.internal:5432/users
+    url: jdbc:postgresql://localhost:5433/movies
+    #    url: jdbc:postgresql://host.docker.internal:5433/movies
     username: admin
     password: admin
     driver-class-name: org.postgresql.Driver
@@ -19,7 +23,6 @@ spring:
     #    show-sql: true
     hibernate:
       ddl-auto: validate
-
     properties:
       hibernate:
         format_sql: true

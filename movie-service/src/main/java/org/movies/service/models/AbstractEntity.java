@@ -23,7 +23,6 @@ public class AbstractEntity {
     private Long id;
 
     @Column(name = "uuid", updatable = false, nullable = false, unique = true)
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String uuid;
 
     @Column(name = "created_at", updatable = false)

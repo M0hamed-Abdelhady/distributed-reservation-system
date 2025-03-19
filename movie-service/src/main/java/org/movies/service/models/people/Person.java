@@ -36,7 +36,7 @@ public class Person extends AbstractEntity {
     private LocalDate deathDate;
 
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
-    private Set<MoviePerson> moviePersons = new HashSet<>();
+    private Set<MoviePerson> movies = new HashSet<>();
 
     @Convert(converter = RoleSetJSONConverter.class)
     @Column(columnDefinition = "TEXT")

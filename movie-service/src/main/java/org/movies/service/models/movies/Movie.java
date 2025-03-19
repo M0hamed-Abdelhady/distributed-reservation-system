@@ -42,13 +42,15 @@ public class Movie extends AbstractEntity {
 
     private String trailerUrl;
 
-
-    @ElementCollection(targetClass = Genre.class)
-    @CollectionTable(name = "movie_genres", joinColumns = @JoinColumn(name = "movie_id"))
-    @Column(name = "genre")
-    private Set<Genre> genres = new HashSet<>();
-
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<MoviePerson> moviePersons = new HashSet<>();
+    private Set<MoviePerson> crew = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "movie_genre",
+            joinColumns = @JoinColumn(name = "movie_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id")
+    )
+    private Set<Genre> genres = new HashSet<>();
 
 }
