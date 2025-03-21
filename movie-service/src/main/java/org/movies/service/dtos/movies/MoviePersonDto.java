@@ -2,6 +2,7 @@ package org.movies.service.dtos.movies;
 
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
+import org.movies.service.models.people.Role;
 
 @Getter
 @Data
@@ -16,5 +17,5 @@ public class MoviePersonDto {
     private String characterName;
 
     @NonNull
-    private String role;
+    private Role role;
 }

@@ -1,7 +1,9 @@
 package org.movies.service.dtos.people;
 
 import lombok.*;
+import org.movies.service.models.people.Role;
 
+import java.time.LocalDate;
 import java.util.Map;
 import java.util.Set;
 
@@ -14,8 +16,8 @@ public class PersonResponseDto {
     private String id;
     private String name;
     private String biography;
-    private String birthDate;
-    private String deathDate;
-    private Set<String> roles;
+    private LocalDate birthDate;
+    private LocalDate deathDate;
+    private Set<Role> roles;
     private Map<String, String> socialMediaLinks;
 }

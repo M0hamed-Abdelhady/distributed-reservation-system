@@ -2,9 +2,9 @@ package org.movies.service.dtos.people;
 
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
+import org.movies.service.models.people.Role;
 
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -28,7 +28,7 @@ public class PersonRequestDto {
     private LocalDate deathDate;
 
     @NonNull
-    private Set<String> roles = new HashSet<>();
+    private Set<Role> roles;
 
     @NonNull
     private Map<String, String> socialMediaLinks;

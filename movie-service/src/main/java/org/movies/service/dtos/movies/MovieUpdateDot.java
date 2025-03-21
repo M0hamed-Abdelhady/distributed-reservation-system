@@ -3,7 +3,7 @@ package org.movies.service.dtos.movies;
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
 
-import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Getter
@@ -12,10 +12,6 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class MovieUpdateDot {
-    @NonNull
-    @UUID
-    private String id;
-
     @NonNull
     private String title;
 
@@ -26,7 +22,7 @@ public class MovieUpdateDot {
     private String posterUrl;
 
     @NonNull
-    private Timestamp releaseDate;
+    private LocalDate releaseDate;
 
     @NonNull
     private Integer duration;
@@ -43,5 +39,5 @@ public class MovieUpdateDot {
     private String trailerUrl;
 
     @NonNull
-    private Set<GenreRequestDto> genres;
+    private Set<GenreDto> genres;
 }

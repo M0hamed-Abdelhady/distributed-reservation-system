@@ -1,9 +1,8 @@
 package org.movies.service.dtos.movies;
 
 import lombok.*;
-import org.hibernate.validator.constraints.UUID;
 
-import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
@@ -23,7 +22,7 @@ public class MovieCreateDto {
     private String posterUrl;
 
     @NonNull
-    private Timestamp releaseDate;
+    private LocalDate releaseDate;
 
     @NonNull
     private Integer duration;
@@ -43,5 +42,5 @@ public class MovieCreateDto {
     private List<MoviePersonDto> crew;
 
     @NonNull
-    private Set<GenreRequestDto> genres;
+    private Set<GenreDto> genres;
 }
