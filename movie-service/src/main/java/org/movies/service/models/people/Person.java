@@ -27,6 +27,8 @@ public class Person extends AbstractEntity {
     @Column(nullable = false)
     private String name;
 
+    private String profilePictureUrl;
+
     private String biography;
 
     private String nationality;

@@ -1,5 +1,6 @@
 package org.movies.service.dtos.people;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
 import org.movies.service.models.people.Role;
@@ -14,11 +15,11 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class PersonRequestDto {
-    @NonNull
+    @NotNull
     @UUID
     private String id;
 
-    @NonNull
+    @NotNull
     private String name;
 
     private String biography;
@@ -27,9 +28,8 @@ public class PersonRequestDto {
 
     private LocalDate deathDate;
 
-    @NonNull
+    @NotNull
     private Set<Role> roles;
 
-    @NonNull
     private Map<String, String> socialMediaLinks;
 }

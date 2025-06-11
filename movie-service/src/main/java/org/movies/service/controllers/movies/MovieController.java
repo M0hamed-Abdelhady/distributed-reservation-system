@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.hibernate.validator.constraints.Range;
 import org.movies.service.dtos.Response;
 import org.movies.service.dtos.movies.MovieCreateDto;
-import org.movies.service.dtos.movies.MovieUpdateDot;
+import org.movies.service.dtos.movies.MovieUpdateDto;
 import org.movies.service.utils.Constants;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +34,7 @@ public class MovieController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Response> updateMovie(@PathVariable String id, @RequestBody MovieUpdateDot movieUpdateDot) {
+    public ResponseEntity<Response> updateMovie(@PathVariable String id, @RequestBody MovieUpdateDto movieUpdateDto) {
         return null;
     }
 

@@ -1,5 +1,6 @@
 package org.movies.service.dtos.movies;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.validator.constraints.UUID;
 
@@ -10,9 +11,9 @@ import org.hibernate.validator.constraints.UUID;
 @Builder
 public class GenreDto {
     @UUID
-    @NonNull
+    @NotNull
     private String id;
 
-    @NonNull
+    @NotNull
     private String name;
 }

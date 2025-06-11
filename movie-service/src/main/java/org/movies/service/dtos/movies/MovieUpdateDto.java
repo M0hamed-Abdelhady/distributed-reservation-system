@@ -1,43 +1,49 @@
 package org.movies.service.dtos.movies;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
-import org.hibernate.validator.constraints.UUID;
 
 import java.time.LocalDate;
 import java.util.Set;
+
+import org.hibernate.validator.constraints.UUID;
 
 @Getter
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class MovieUpdateDot {
-    @NonNull
+public class MovieUpdateDto {
+    @NotNull
+    @UUID
+    private String id;
+
+    @NotNull
     private String title;
 
-    @NonNull
+    @NotNull
     private String description;
 
-    @NonNull
+    @NotNull
     private String posterUrl;
 
-    @NonNull
+    @NotNull
     private LocalDate releaseDate;
 
-    @NonNull
+    @NotNull
     private Integer duration;
 
-    @NonNull
-    private Double rating;
+    @NotNull
+    private String rating;
 
-    @NonNull
+    @NotNull
     private String language;
 
-    @NonNull
+    @NotNull
     private String country;
 
     private String trailerUrl;
 
-    @NonNull
+    @NotNull
     private Set<GenreDto> genres;
 }

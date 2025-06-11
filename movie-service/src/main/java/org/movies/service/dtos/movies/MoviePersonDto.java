@@ -1,6 +1,11 @@
 package org.movies.service.dtos.movies;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Builder;
+import jakarta.validation.constraints.NotNull;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.UUID;
 import org.movies.service.models.people.Role;
 
@@ -10,12 +15,16 @@ import org.movies.service.models.people.Role;
 @NoArgsConstructor
 @Builder
 public class MoviePersonDto {
-    @NonNull
+    @NotNull
     @UUID
     private String id;
 
+    @NotNull
+    private String name;
+
+    @NotNull
     private String characterName;
 
-    @NonNull
+    @NotNull
     private Role role;
 }

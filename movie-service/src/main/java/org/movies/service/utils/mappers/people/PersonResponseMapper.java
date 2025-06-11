@@ -1,16 +1,16 @@
-package org.movies.service.utils.mappers.movies;
+package org.movies.service.utils.mappers.people;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.movies.service.dtos.movies.MoviePersonDto;
+import org.movies.service.dtos.people.PersonResponseDto;
 import org.movies.service.models.people.Person;
 
 @Mapper(componentModel = "spring")
-public interface MoviePersonMapper {
+public interface PersonResponseMapper {
 
     @Mapping(target = "uuid", source = "id")
-    Person toEntity(MoviePersonDto dto);
+    Person toEntity(PersonResponseDto dto);
 
     @Mapping(target = "id", source = "uuid")
-    MoviePersonDto toDto(Person entity);
+    PersonResponseDto toDto(Person entity);
 }

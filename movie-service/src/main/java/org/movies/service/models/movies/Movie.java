@@ -1,6 +1,7 @@
 package org.movies.service.models.movies;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,8 +36,9 @@ public class Movie extends AbstractEntity {
     @Column(nullable = false)
     private Integer duration;
 
-    @Column(nullable = false)
-    private Double rating;
+    @Column(nullable = false, length = 3)
+    @Pattern(regexp = "^[0-9]\\.[0-9]$", message = "Invalid rating format")
+    private String rating;
 
     @Column(nullable = false)
     private String language;

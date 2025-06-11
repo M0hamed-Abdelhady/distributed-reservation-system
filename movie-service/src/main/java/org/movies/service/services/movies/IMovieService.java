@@ -2,7 +2,7 @@ package org.movies.service.services.movies;
 
 import org.movies.service.dtos.Response;
 import org.movies.service.dtos.movies.MovieCreateDto;
-import org.movies.service.dtos.movies.MovieUpdateDot;
+import org.movies.service.dtos.movies.MovieUpdateDto;
 import org.springframework.http.ResponseEntity;
 
 public interface IMovieService {
@@ -12,7 +12,7 @@ public interface IMovieService {
 
     public ResponseEntity<Response> createMovie(MovieCreateDto movieCreateDto);
 
-    public ResponseEntity<Response> updateMovie(String id, MovieUpdateDot movieUpdateDot);
+    public ResponseEntity<Response> updateMovie(String id, MovieUpdateDto movieUpdateDto);
 
     public ResponseEntity<Response> deleteMovie(String id);
 

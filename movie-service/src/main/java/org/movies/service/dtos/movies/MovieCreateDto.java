@@ -1,7 +1,7 @@
 package org.movies.service.dtos.movies;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
@@ -12,35 +12,35 @@ import java.util.Set;
 @NoArgsConstructor
 @Builder
 public class MovieCreateDto {
-    @NonNull
+    @NotNull
     private String title;
 
-    @NonNull
+    @NotNull
     private String description;
 
-    @NonNull
+    @NotNull
     private String posterUrl;
 
-    @NonNull
+    @NotNull
     private LocalDate releaseDate;
 
-    @NonNull
+    @NotNull
     private Integer duration;
 
-    @NonNull
-    private Double rating;
+    @NotNull
+    private String rating;
 
-    @NonNull
+    @NotNull
     private String language;
 
-    @NonNull
+    @NotNull
     private String country;
 
     private String trailerUrl;
 
-    @NonNull
+    @NotNull
     private List<MoviePersonDto> crew;
 
-    @NonNull
+    @NotNull
     private Set<GenreDto> genres;
 }
